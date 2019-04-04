@@ -17,8 +17,9 @@
             android:layout_height="wrap_content"
             android:onClick="playSong"
             android:layout_gravity="center"
-            android:layout_margin="40dip"
+            android:layout_margin="30dip"
             android:text="Play" />
+
 
         <Button
             android:id="@+id/button_stop"
@@ -26,7 +27,10 @@
             android:layout_height="wrap_content"
             android:onClick="stopSong"
             android:layout_gravity="center"
+            android:layout_margin="40dip"
             android:text="Stop" />
+
+
     </LinearLayout>
 
 

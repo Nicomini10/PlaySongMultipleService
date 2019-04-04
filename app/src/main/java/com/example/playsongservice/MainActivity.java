@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     public void stopSong(View view){
 
         Intent myIntent = new Intent(this, PlaySongService.class);
+
         this.stopService(myIntent);
+
     }
+
 }
