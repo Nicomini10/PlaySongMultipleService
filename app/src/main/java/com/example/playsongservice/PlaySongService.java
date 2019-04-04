@@ -8,7 +8,6 @@ package com.example.playsongservice;
 public class PlaySongService extends Service {
 
     private MediaPlayer mediaPlayer;
-    int array_song = 0;
 
 
     public PlaySongService() {
@@ -25,26 +24,15 @@ public class PlaySongService extends Service {
     public void onCreate() {
         super.onCreate();
 
-        final int[] songs = new int[4];
 
-        songs[0] = R.raw.mysong4;
-        songs[1] = R.raw.mysong2;
-        songs[2] = R.raw.golf;
-        songs[3] = R.raw.mysong;
-
-
-        mediaPlayer = MediaPlayer.create(getApplicationContext(), songs[array_song]);
+        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.mysong);
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
             @Override
             public void onCompletion(MediaPlayer mp) {
 
-                array_song++;
-
-                mediaPlayer.release();
-                mediaPlayer = MediaPlayer.create(getApplicationContext(), songs[array_song]);
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.mysong);
                 mediaPlayer.start();
-                mediaPlayer.setOnCompletionListener(this);
 
 
             }
